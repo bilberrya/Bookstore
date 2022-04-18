@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -274,6 +274,7 @@ namespace Книжный
 
                 flowLayoutPanel8.Visible = false;
             }
+            cn.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -294,28 +295,64 @@ namespace Книжный
         {
             Program.count++;
             Program.price += Convert.ToInt32(label15.Text);
+            SqlCommand cmd;
+            SqlConnection cn = new SqlConnection(ConnStr);
+            cn.Open();
+            cmd = cn.CreateCommand();
+            cmd.CommandText = "select [id] from Книги where Название = \'" + label9.Text + "\'";
+            Program.id = Convert.ToInt32(cmd.ExecuteScalar());
+            cn.Close();
             Fill();
+            Корзина f = new Корзина();
+            f.Fill();
         }
 
         private void pictureBox2_DoubleClick(object sender, EventArgs e)
         {
             Program.count++;
             Program.price += Convert.ToInt32(label29.Text);
+            SqlCommand cmd;
+            SqlConnection cn = new SqlConnection(ConnStr);
+            cn.Open();
+            cmd = cn.CreateCommand();
+            cmd.CommandText = "select [id] from Книги where Название = \'" + label23.Text + "\'";
+            Program.id = Convert.ToInt32(cmd.ExecuteScalar());
+            cn.Close();
             Fill();
+            Корзина f = new Корзина();
+            f.Fill();
         }
 
         private void pictureBox3_DoubleClick(object sender, EventArgs e)
         {
             Program.count++;
             Program.price += Convert.ToInt32(label43.Text);
+            SqlCommand cmd;
+            SqlConnection cn = new SqlConnection(ConnStr);
+            cn.Open();
+            cmd = cn.CreateCommand();
+            cmd.CommandText = "select [id] from Книги where Название = \'" + label37.Text + "\'";
+            Program.id = Convert.ToInt32(cmd.ExecuteScalar());
+            cn.Close();
             Fill();
+            Корзина f = new Корзина();
+            f.Fill();
         }
 
         private void pictureBox4_DoubleClick(object sender, EventArgs e)
         {
             Program.count++;
             Program.price += Convert.ToInt32(label57.Text);
+            SqlCommand cmd;
+            SqlConnection cn = new SqlConnection(ConnStr);
+            cn.Open();
+            cmd = cn.CreateCommand();
+            cmd.CommandText = "select [id] from Книги where Название = \'" + label51.Text + "\'";
+            Program.id = Convert.ToInt32(cmd.ExecuteScalar());
+            cn.Close();
             Fill();
+            Корзина f = new Корзина();
+            f.Fill();
         }
 
         private void button3_Click(object sender, EventArgs e)
