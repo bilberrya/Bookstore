@@ -21,5 +21,6 @@ namespace Книжный
 
         public static int count = 0;
         public static int price = 0;
+        public static int id = 0;
     }
 }
