@@ -108,6 +108,10 @@ namespace Книжный
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -228,7 +232,7 @@ namespace Книжный
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(147, 3);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(863, 122);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(712, 122);
             this.flowLayoutPanel2.TabIndex = 1;
             // 
             // label8
@@ -386,6 +390,7 @@ namespace Книжный
             this.flowLayoutPanel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanel3.Controls.Add(this.pictureBox1);
             this.flowLayoutPanel3.Controls.Add(this.flowLayoutPanel2);
+            this.flowLayoutPanel3.Controls.Add(this.button4);
             this.flowLayoutPanel3.Location = new System.Drawing.Point(12, 89);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Size = new System.Drawing.Size(1027, 133);
@@ -396,6 +401,7 @@ namespace Книжный
             this.flowLayoutPanel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanel4.Controls.Add(this.pictureBox2);
             this.flowLayoutPanel4.Controls.Add(this.flowLayoutPanel5);
+            this.flowLayoutPanel4.Controls.Add(this.button5);
             this.flowLayoutPanel4.Location = new System.Drawing.Point(12, 228);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
             this.flowLayoutPanel4.Size = new System.Drawing.Size(1027, 126);
@@ -430,7 +436,7 @@ namespace Книжный
             this.flowLayoutPanel5.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel5.Location = new System.Drawing.Point(147, 3);
             this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-            this.flowLayoutPanel5.Size = new System.Drawing.Size(863, 116);
+            this.flowLayoutPanel5.Size = new System.Drawing.Size(712, 116);
             this.flowLayoutPanel5.TabIndex = 1;
             // 
             // label22
@@ -578,6 +584,7 @@ namespace Книжный
             this.flowLayoutPanel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanel6.Controls.Add(this.pictureBox3);
             this.flowLayoutPanel6.Controls.Add(this.flowLayoutPanel7);
+            this.flowLayoutPanel6.Controls.Add(this.button6);
             this.flowLayoutPanel6.Location = new System.Drawing.Point(12, 360);
             this.flowLayoutPanel6.Name = "flowLayoutPanel6";
             this.flowLayoutPanel6.Size = new System.Drawing.Size(1027, 134);
@@ -612,7 +619,7 @@ namespace Книжный
             this.flowLayoutPanel7.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel7.Location = new System.Drawing.Point(147, 3);
             this.flowLayoutPanel7.Name = "flowLayoutPanel7";
-            this.flowLayoutPanel7.Size = new System.Drawing.Size(863, 121);
+            this.flowLayoutPanel7.Size = new System.Drawing.Size(712, 121);
             this.flowLayoutPanel7.TabIndex = 1;
             // 
             // label36
@@ -760,6 +767,7 @@ namespace Книжный
             this.flowLayoutPanel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanel8.Controls.Add(this.pictureBox4);
             this.flowLayoutPanel8.Controls.Add(this.flowLayoutPanel9);
+            this.flowLayoutPanel8.Controls.Add(this.button7);
             this.flowLayoutPanel8.Location = new System.Drawing.Point(12, 500);
             this.flowLayoutPanel8.Name = "flowLayoutPanel8";
             this.flowLayoutPanel8.Size = new System.Drawing.Size(1027, 130);
@@ -794,7 +802,7 @@ namespace Книжный
             this.flowLayoutPanel9.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel9.Location = new System.Drawing.Point(144, 3);
             this.flowLayoutPanel9.Name = "flowLayoutPanel9";
-            this.flowLayoutPanel9.Size = new System.Drawing.Size(866, 116);
+            this.flowLayoutPanel9.Size = new System.Drawing.Size(715, 116);
             this.flowLayoutPanel9.TabIndex = 1;
             // 
             // label50
@@ -965,6 +973,47 @@ namespace Книжный
             this.button3.TabIndex = 15;
             this.button3.Text = "Корзина";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(865, 3);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(148, 51);
+            this.button4.TabIndex = 22;
+            this.button4.Text = "Добавить в корзину";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.pictureBox1_DoubleClick);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(865, 3);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(148, 51);
+            this.button5.TabIndex = 23;
+            this.button5.Text = "Добавить в корзину";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.pictureBox2_DoubleClick);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(865, 3);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(148, 51);
+            this.button6.TabIndex = 23;
+            this.button6.Text = "Добавить в корзину";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.pictureBox3_DoubleClick);
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(865, 3);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(148, 51);
+            this.button7.TabIndex = 23;
+            this.button7.Text = "Добавить в корзину";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.pictureBox4_DoubleClick);
             // 
             // Каталог
             // 
@@ -980,6 +1029,7 @@ namespace Книжный
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.flowLayoutPanel4);
             this.Name = "Каталог";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Каталог";
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
@@ -1084,6 +1134,10 @@ namespace Книжный
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
     }
 }
 

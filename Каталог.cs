@@ -27,8 +27,37 @@ namespace Книжный
             SqlConnection cn = new SqlConnection(ConnStr);
             cn.Open();
             cmd = cn.CreateCommand();
+            label4.Text = Convert.ToString(Program.count);
+            label5.Text = Convert.ToString(Program.price);
+            if (Program.count < 3)
+            {
+                label7.Text = "0%";
+                label6.Visible = false;
+            }
+            else if ((Program.count >= 3) && (Program.count < 5))
+            {
+                label7.Text = "5%";
+                Program.price = Convert.ToInt32(Convert.ToInt32(label5.Text) * 0.95);
+                label6.Visible = true;
+                label6.Text = Convert.ToString(Program.price);
+            }
+            else if ((Program.count >= 5) && (Program.count < 10))
+            {
+                label7.Text = "10%";
+                Program.price = Convert.ToInt32(Convert.ToInt32(label5.Text) * 0.9);
+                label6.Visible = true;
+                label6.Text = Convert.ToString(Program.price);
+            }
+            else if (Program.count >= 10)
+            {
+                label7.Text = "15%";
+                Program.price = Convert.ToInt32(Convert.ToInt32(label5.Text) * 0.85);
+                label6.Visible = true;
+                label6.Text = Convert.ToString(Program.price);
+            }
             if (str == 1)
             {
+                flowLayoutPanel8.Visible = true;
                 cmd.CommandText = "select [Название] from Книги where id = 1";
                 label9.Text = (string)cmd.ExecuteScalar();
                 cmd.CommandText = "select [Жанр] from Книги where id = 1";
@@ -107,6 +136,7 @@ namespace Книжный
             }
             else if (str == 2)
             {
+                flowLayoutPanel8.Visible = true;
                 cmd.CommandText = "select [Название] from Книги where id = 5";
                 label9.Text = (string)cmd.ExecuteScalar();
                 cmd.CommandText = "select [Жанр] from Книги where id = 5";
@@ -242,7 +272,7 @@ namespace Книжный
                 Bitmap img3 = new Bitmap("C:/Users/Anastasia/Desktop/4 курс/экзамен 01/Книжный/Covers/Король шрамов.jpg");
                 pictureBox3.Image = img3;
 
-
+                flowLayoutPanel8.Visible = false;
             }
         }
 
@@ -257,6 +287,41 @@ namespace Книжный
         {
             if (str > 1) 
                 str--;
+            Fill();
+        }
+
+        private void pictureBox1_DoubleClick(object sender, EventArgs e)
+        {
+            Program.count++;
+            Program.price += Convert.ToInt32(label15.Text);
+            Fill();
+        }
+
+        private void pictureBox2_DoubleClick(object sender, EventArgs e)
+        {
+            Program.count++;
+            Program.price += Convert.ToInt32(label29.Text);
+            Fill();
+        }
+
+        private void pictureBox3_DoubleClick(object sender, EventArgs e)
+        {
+            Program.count++;
+            Program.price += Convert.ToInt32(label43.Text);
+            Fill();
+        }
+
+        private void pictureBox4_DoubleClick(object sender, EventArgs e)
+        {
+            Program.count++;
+            Program.price += Convert.ToInt32(label57.Text);
+            Fill();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Корзина f = new Корзина();
+            f.ShowDialog();
             Fill();
         }
     }
