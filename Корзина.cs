@@ -118,10 +118,12 @@ namespace Книжный
 
         private void button3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Вы точно хотите очистить корзину?", "Удаление", MessageBoxButtons.OK);
-            Program.count = 0;
-            Program.price = 0;
-            Fill();
+            if (MessageBox.Show("Вы точно хотите очистить корзину?", "Удаление", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                Program.count = 0;
+                Program.price = 0;
+                Fill();
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
